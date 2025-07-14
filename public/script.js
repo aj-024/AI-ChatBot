@@ -158,26 +158,41 @@ messageInput.addEventListener("input", () => {
 
 //handle file input change
 fileInput.addEventListener("change", () => {
-    const file = fileInput.files[0];
-    if(!file) return;
+  const file = fileInput.files[0];
+  if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = (e) => {
-        fileUploadWrapper.querySelector("img").src = e.target.result;
-        fileUploadWrapper.classList.add("file-uploaded");
-        const base64String = e.target.result.split(",")[1];
+  // 🔴 Only allow images (png, jpg, jpeg, webp, gif)
+  if (!file.type.startsWith("image/")) {
+    alert("❌ Only image files are supported (e.g., .png, .jpg, .jpeg).");
+    fileInput.value = "";
+    return;
+  }
 
-        //Store file data in userdata
-        userData.file = {
-            data: base64String,
-            mime_type: file.type
-        }
+  // 🔴 Limit file size to 4 MB
+  const maxSize = 4 * 1024 * 1024; // 4 MB
+  if (file.size > maxSize) {
+    alert("⚠️ Image too large! Max allowed size is 4 MB.");
+    fileInput.value = "";
+    return;
+  }
 
-        fileInput.value = "";
-    }
-    reader.readAsDataURL(file);
-   
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    fileUploadWrapper.querySelector("img").src = e.target.result;
+    fileUploadWrapper.classList.add("file-uploaded");
+    const base64String = e.target.result.split(",")[1];
+
+    // Store file data in userData
+    userData.file = {
+      data: base64String,
+      mime_type: file.type
+    };
+
+    fileInput.value = "";
+  };
+  reader.readAsDataURL(file);
 });
+
 
 //cancle upload
 fileCancelButton.addEventListener("click", () => {
