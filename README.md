@@ -36,7 +36,7 @@ A sleek and interactive AI chatbot built using **HTML**, **CSS**, and **JavaScri
 ---
 
 ## 📁 Folder Structure
-
+```bash
 AI-ChatBot/
 ├── public/
 │ ├── index.html
@@ -48,7 +48,7 @@ AI-ChatBot/
 │ └── .env
 ├── .gitignore
 └── README.md
-
+```
 
 ---
 
