@@ -10,12 +10,6 @@ A sleek and interactive AI chatbot built using **HTML**, **CSS**, and **JavaScri
 
 ---
 
-## 📸 Preview
-
-![Chatbot Screenshot](public/screenshot.png) <!-- Optional: Add a screenshot of your UI -->
-
----
-
 ## 🧠 Features
 
 - 💬 Real-time AI chat using Google Gemini
