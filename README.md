@@ -6,7 +6,7 @@ A sleek and interactive AI chatbot built using **HTML**, **CSS**, and **JavaScri
 
 ## 🚀 Live Demo
 
-🌐 [https://your-app-url.onrender.com](https://your-app-url.onrender.com) *(Replace after deployment)*
+🌐 [https://ai-chatbot-3118.onrender.com/)
 
 ---
 
