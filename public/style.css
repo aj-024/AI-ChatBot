@@ -454,12 +454,7 @@ body.show-chatbot .center-hint {
   display: none;
 }
 
-/* 📱 Hide on mobile */
-@media (max-width: 768px) {
-  .center-hint {
-    display: none;
-  }
-}
+
 /* Existing popup styles (unchanged) */
 .chat-hint-popup {
   position: fixed;
@@ -487,12 +482,6 @@ body.show-chatbot .center-hint {
   100% { opacity: 0; transform: translateY(20px); }
 }
 
-/* 📱 Hide on small screens */
-@media (max-width: 768px) {
-  .chat-hint-popup {
-    display: none;
-  }
-}
 
 /* 🔒 Hide the hint the moment the chatbot is opened */
 body.show-chatbot .chat-hint-popup {
