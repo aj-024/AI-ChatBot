@@ -6,7 +6,8 @@ A sleek and interactive AI chatbot built using **HTML**, **CSS**, and **JavaScri
 
 ## 🚀 Live Demo
 
-🌐 [https://ai-chatbot-3118.onrender.com/)
+🌐 [Click here to interact with the AI Chatbot](https://ai-chatbot-3118.onrender.com/) — powered by real-time responses and a smooth UI!
+
 
 ---
 
